@@ -148,7 +148,6 @@ b = torch.randn((5000, 5000), device=device)
 # Time the matrix multiplication
 start_time = time.time()
 c = torch.matmul(a, b)
-torch.cuda.synchronize()  # Ensure all operations finish
 end_time = time.time()
 
 print(f"✅ Metal GPU Time: {end_time - start_time:.4f} seconds")
